@@ -8,7 +8,7 @@ function setA()
 end
 
 function setB()
-    if(mp.get_property_number("time-pos")>aPoint) then
+    if mp.get_property_number("time-pos")>aPoint then
         bPoint=mp.get_property_number("time-pos")
     end
 end
