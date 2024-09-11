@@ -32,12 +32,8 @@ function toggleLoop()
     looping= not looping
 end
 
-function seektoHome()
-    mp.set_property_native("time-pos", 0)
-end
-
-function seektoEnd()
-    mp.set_property_native("time-pos", mp.get_property_number("duration"))
+function seektoA()
+    mp.set_property_native("time-pos", aPoint)
 end
 
 mp.observe_property("time-pos", "string", loop)
@@ -48,6 +44,6 @@ mp.add_forced_key_binding("{", "{", resetA)
 mp.add_forced_key_binding("}", "}", resetB)
 mp.add_forced_key_binding("\\", "\\", toggleLoop)
 
-mp.add_forced_key_binding(",", "", seektoHome)
-mp.add_forced_key_binding(".", "", seektoEnd)
+mp.add_forced_key_binding(".", "", seektoA)
+mp.add_forced_key_binding(",", "", seektoA)
 
