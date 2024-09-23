@@ -1,5 +1,3 @@
-local mp = require("mp")
-
 local volumeStep=5
 
 function volumeDown()
